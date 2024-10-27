@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgb(187, 219, 138);
+        }
+        #wrapper{
+            border: 5px solid rgba(113, 113, 119, 0.5);
+            margin-top: 10%;
+            margin-left: 30%;
+            border-radius: 10px;
+            place-content: center;
+            text-align: center;
+            background: transparent;
+            backdrop-filter: blur(20px);
+            width: 500px;
+            height: 400px;
+            box-shadow: 0px 5px 10px;
+        }
+
+        #wrapper h1{
+            color: rgb(96, 122, 96);
+            padding-bottom: 20px;
+        }
+
+        #wrapper input{
+            border: none;
+            padding: 5px;
+            background: grey;
+            color: white;
+        }
+
+        button{
+            
+            margin-left: 40px;
+            padding: 10px 20px;
+            margin-bottom: 20px;   
+            border-radius: 10px;
+            
+            background:rgb(17, 226, 114)
+        }
+
+        p{
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div id="wrapper">
+        <h1>US DOLLAR TO RUPEE</h1>
+        <input type="text" id="ind">
+        <button onclick="change()">Convert</button>
+        <p id="result1"></p>
+        </div>
+        <script>
+
+            function change(){
+                const usVal=Number(document.getElementById("ind").value)
+                const indVal= usVal*83.87
+                const result=document.getElementById("result1")
+                result.innerHTML="&#8377 "+ indVal.toFixed(2)
+            }
+        </script>
+</body>
+</html>
